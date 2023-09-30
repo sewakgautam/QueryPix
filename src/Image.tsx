@@ -1,6 +1,4 @@
-import React from "react";
-
-const Image = ({ url, title }:{url:string,title:string}) => (
+const Image = ({ url, title }: { url: string; title: string }) => (
   <div>
     <img style={{ display: "flex" }} src={url} alt={title} />
   </div>
