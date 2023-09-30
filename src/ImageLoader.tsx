@@ -1,13 +1,13 @@
 import Image from "./Image";
 
-export default function ImageLoader(images) {
+export default function ImageLoader(images: any) {
   // console.log(image);
 
   const result = images;
   let final;
   // console.log(result.data);
   if (result.data.length > 0) {
-    final = result.data.map((image) => {
+    final = result.data.map((image: any) => {
       console.log(image);
       const farm = image.farm;
       const server = image.server;

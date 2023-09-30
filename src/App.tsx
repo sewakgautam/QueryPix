@@ -1,20 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import "./App.css";
 import axios from "axios";
-import Image from "./Image";
 import ImageLoader from "./ImageLoader";
-// import apikey from "./api.js";
-
-// import Flickr from "flickr-sdk";
-
-// const flickr = new Flickr("636e1481b4f3c446d26b8eb6ebfe7127");
-
-// const data = await flickr.photos.getInfo({
-//   photo_id: "52919063084",
-// });
-
-// console.log("this is", data);
 
 function App() {
   const [Images, setImages] = useState([]);
