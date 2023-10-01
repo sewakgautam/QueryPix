@@ -1,22 +1,20 @@
 import { useState } from "react";
 
 import "./App.css";
-import axios from "axios";
 import ImageLoader from "./ImageLoader";
+import ImageSearch from "./api";
+import { Vortex } from "react-loader-spinner";
 
 function App() {
   const [Images, setImages] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
-  const runSearch = (query: any) => {
+  const runSearch = (query: string) => {
     setLoading(true);
-    axios
-      .get(
-        `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${"636e1481b4f3c446d26b8eb6ebfe7127"}&tags=${query}&per_page=24&format=json&nojsoncallback=1`
-      )
-      .then((response) => {
+    ImageSearch(query)
+      .then((res) => {
         setLoading(false);
-        setImages(response.data.photos.photo);
+        setImages(res);
       })
       .catch((error) => {
         console.log(
@@ -26,44 +24,40 @@ function App() {
       });
   };
 
-  // const ImageLoader = Images.map((image: any) => {
-  //   const farm = image.farm;
-  //   const server = image.server;
-  //   const id = image.id;
-  //   const secret = image.secret;
-  //   const title = image.title;
-  //   const url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
-  //   return (
-  //     <div>
-  //       <Image url={url} title={title} />
-  //     </div>
-  //   );
-  // });
-
-  // console.log(ImageLoader);
-
-  // const gallary = () => {
-  //   console.log(ImageLoader);
-  // };
-
   return (
     <div className="container">
       <div>
-        <h2 style={{ fontSize: 70 }}>QueryPix</h2>
+        <h2 className="logo">QueryPix</h2>
       </div>
       <div>
         <input
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+          onKeyDown={(t) => {
+            if (t.key == "Enter") {
+              runSearch(search);
+            }
+          }}
         ></input>
         <button type="submit" onClick={() => runSearch(search)}>
-          search
+        🔍 search
         </button>
       </div>
-      <div>
-        <p>Here is image</p>
-        {loading ? `<p>Loading</p>` : <ImageLoader data={Images} />}
+      <div className="container" style={{ marginTop: 100 }}>
+        {loading ? (
+          <Vortex
+            visible={loading}
+            height="80"
+            width="80"
+            ariaLabel="vortex-loading"
+            wrapperStyle={{}}
+            wrapperClass="vortex-wrapper"
+            colors={["red", "green", "blue", "yellow", "orange", "purple"]}
+          />
+        ) : (
+          <ImageLoader data={Images} />
+        )}
       </div>
     </div>
   );
