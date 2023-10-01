@@ -7,7 +7,7 @@ import { Vortex } from "react-loader-spinner";
 
 function App() {
   const [Images, setImages] = useState([]);
-  const [search, setSearch] = useState("Nepal");
+  const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
