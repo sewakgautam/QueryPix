@@ -25,7 +25,10 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <>
+      <div
+      className="flex-center"
+      >
       <div>
         <h2 className="logo">QueryPix</h2>
       </div>
@@ -44,7 +47,8 @@ function App() {
           🔍 search
         </button>
       </div>
-      <div className="container" style={{ marginTop: 100 }}>
+      </div>
+      <div className="flex-center" style={{ marginTop: 100, width: "100%" }}>
         {loading ? (
           <Vortex
             visible={loading}
@@ -59,7 +63,7 @@ function App() {
           <ImageLoader data={Images} />
         )}
       </div>
-    </div>
+    </>
   );
 }
 
