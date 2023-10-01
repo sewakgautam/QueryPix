@@ -12,7 +12,7 @@ function App() {
   const runSearch = (query: string) => {
     setLoading(true);
     ImageSearch(query)
-      .then((res) => {
+      .then((res: any) => {
         setLoading(false);
         setImages(res);
       })
@@ -41,7 +41,7 @@ function App() {
           }}
         ></input>
         <button type="submit" onClick={() => runSearch(search)}>
-        🔍 search
+          🔍 search
         </button>
       </div>
       <div className="container" style={{ marginTop: 100 }}>
