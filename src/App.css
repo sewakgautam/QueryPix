@@ -25,6 +25,31 @@
   align-items: center;
 }
 
+.img-card{
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-card a{
+  transition: all 0.3s ease-in-out;
+}
+
+.img-card img{
+  transform-origin: center center; /* add this line */
+  scale: 1.2;
+  display: flex;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.img-card:hover img{
+  scale: 1;
+}
+
 input[type="text"] {
   padding: 10px;
   border: 2px solid #ccc;
