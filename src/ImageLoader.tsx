@@ -25,6 +25,17 @@ export default function ImageLoader(images: any) {
   }
 
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: 50 }}>{final}</div>
+    <div style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+      gap: "50px",
+      placeContent: "center",
+      placeItems: "center",
+      margin: "0 auto",
+      width: "100%",
+      maxWidth: "1200px",
+    }}>
+      {final}
+    </div>
   );
 }

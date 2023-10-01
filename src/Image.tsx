@@ -6,16 +6,21 @@ const Image = ({
   url: string;
   title: string;
   raw: string;
-}) => (
-  <div>
-    <a href={raw} target="_blank">
-      <img
-        style={{ display: "flex", width: 300, height: 300, objectFit: "cover" }}
-        src={url}
-        alt={title}
-      />
-    </a>
-  </div>
-);
+}) => (<div
+  className="img-card"
+>
+  <a href={ raw } target="_blank"
+  >
+    <img
+      src={ url }
+      alt={ title }
+      onLoad={ (e) => {
+        e.currentTarget.style.opacity = "1";
+      } }
+    />
+  </a>
+</div>);
+
+
 
 export default Image;
