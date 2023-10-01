@@ -4,7 +4,7 @@
   position: relative;
 }
 
-.flex-center{
+.flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,18 +25,19 @@
   align-items: center;
 }
 
-.img-card{
+.img-card {
   transition: all 0.4s ease-in-out;
   position: relative;
   overflow: hidden;
 }
 
-.img-card a{
+.img-card a {
   transition: all 0.3s ease-in-out;
 }
 
-.img-card img{
-  transform-origin: center center; /* add this line */
+.img-card img {
+  transform-origin: center center;
+  /* add this line */
   scale: 1.2;
   display: flex;
   width: 300px;
@@ -46,7 +47,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.img-card:hover img{
+.img-card:hover img {
   scale: 1;
 }
 
@@ -90,4 +91,20 @@ button[type="submit"] {
   .baseimage {
     width: 300px;
   }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 16px;
 }
