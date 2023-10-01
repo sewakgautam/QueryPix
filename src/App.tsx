@@ -48,7 +48,7 @@ function App() {
         </button>
       </div>
       </div>
-      <div className="flex-center" style={{ marginTop: 100, width: "100%" }}>
+      <div className="flex-center" style={{ marginTop: 100, marginBottom: 100, width: "100%" }}>
         {loading ? (
           <Vortex
             visible={loading}
