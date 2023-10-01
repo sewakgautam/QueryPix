@@ -29,7 +29,7 @@ function App() {
       <div>
         <h2 className="logo">QueryPix</h2>
       </div>
-      <div>
+      <div className="input-container">
         <input
           type="text"
           value={search}

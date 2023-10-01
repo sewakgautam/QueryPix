@@ -41,3 +41,26 @@ button[type="submit"] {
   font-size: 16px;
   cursor: pointer;
 }
+
+.baseimage {
+  width: 400px;
+}
+
+/* Media query for small screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+  }
+
+  .baseimage {
+    width: 300px;
+  }
+}

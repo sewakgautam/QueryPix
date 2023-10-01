@@ -16,7 +16,10 @@ export default function ImageLoader(images: any) {
   } else {
     return (
       <div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png" />
+        <img
+          className="baseimage"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png"
+        />
       </div>
     );
   }
