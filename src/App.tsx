@@ -63,8 +63,8 @@ function App() {
           <button type="submit" onClick={ () => runSearch(search) }>
             <span>
             <svg
-              width="20"
-              height="20"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -100,14 +100,14 @@ function App() {
             <ImageLoader data={ Images } />
           </>
         ) }
-        <div className="footer">
+        <footer >
           <p>
             Made with ❤️ by Sewak Gautam, for OpenSource Contribution{ " " }
             <a href="https://github.com/sewakgautam/QueryPix/">
               Contribute Here
             </a>
           </p>
-        </div>
+        </footer>
       </div>
     </>
   );
