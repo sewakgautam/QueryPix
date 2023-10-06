@@ -46,7 +46,7 @@ function App() {
     <>
       <div className="flex-center">
         <div>
-          <h2 className="logo">QueryPix</h2>
+          <h2 className="logo">QueryPixel</h2>
         </div>
         <div className="input-container">
           <input
