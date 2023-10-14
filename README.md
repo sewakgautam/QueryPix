@@ -1,11 +1,11 @@
-# Erase-a-scene
+# QueryPixel
 
-Erase-a-Scene is an effective and user-friendly photo background removal tool, streamlining the task of separating your subject from its backdrop. Leveraging state-of-the-art technology, it effortlessly eliminates unwanted backgrounds, allowing you to either make them transparent or replace them with new images, elevating the visual impact of your photos.
+QueryPixel is an innovative and user-friendly image retrieval system that allows you to search for stunning visual content on the internet using nothing but text. With the power of the Unsplash API/SDK integrated into QueryPixel, you can easily transform your text-based queries into a visually engaging experience.
 
-The project integrates the API key of Remove.bg, a software that enables you to easily remove backgrounds from images. With Remove.bg, you can simply drag and drop individual images or entire folders from your computer, while having the flexibility to define the destination for your background-free images in the settings."
+The project integrates the API of unplash, Unsplash is a website dedicated to proprietary stock photography. Since 2021, it has been owned by Getty Images. The website claims over 330,000 contributing photographers and generates more than 13 billion photo impressions per month on their growing library of over 5 million photos. Unsplash offers an irrevocable, nonexclusive, worldwide copyright license that allows you to download, copy, modify, distribute, perform, and use photos from their platform for free, even for commercial purposes, without needing permission from or attributing the photographer or Unsplash itself.
 ## Screenshots
 
-![App Screenshot](https://i.ibb.co/rGqDT2W/sc-erasesc.png)
+![App Screenshot](https://i.ibb.co/2KxMkpP/querypixel-sc.png)
 
 
 ## Authors
@@ -15,8 +15,8 @@ The project integrates the API key of Remove.bg, a software that enables you to 
 
 ## References
 
- - [Remove.bg](https://remove.bg)
- - [Remove bg api docs](https://www.remove.bg/tools-api)
+ - [Try Unplash](https://unsplash.com/)
+ - [Unplash api docs](https://unsplash.com/developers)
  
 
 
